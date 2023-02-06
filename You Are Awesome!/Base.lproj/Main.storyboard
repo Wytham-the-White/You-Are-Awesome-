@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,44 +13,52 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw9-zb-4Tu">
-                                <rect key="frame" x="108" y="128" width="159" height="34.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Press Me"/>
-                                <connections>
-                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Lt-dN-0Ap"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-B1-yyS">
-                                <rect key="frame" x="16" y="20" width="343" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLb-4T-a4j">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-B1-yyS">
+                                        <rect key="frame" x="16" y="20" width="382" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw9-zb-4Tu">
+                                        <rect key="frame" x="16" y="64" width="382" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Press Me"/>
+                                        <connections>
+                                            <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Lt-dN-0Ap"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RS7-0t-B6C">
+                                        <rect key="frame" x="16" y="107" width="382" height="687"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="krZ-cG-6jd"/>
+                                    <constraint firstItem="Bw9-zb-4Tu" firstAttribute="leading" secondItem="yLb-4T-a4j" secondAttribute="leading" constant="16" id="3mB-9K-Ho7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bw9-zb-4Tu" secondAttribute="trailing" constant="16" id="8Uy-io-00e"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPe-B1-yyS" secondAttribute="trailing" constant="16" id="PvU-fD-thX"/>
+                                    <constraint firstAttribute="bottom" secondItem="RS7-0t-B6C" secondAttribute="bottom" constant="20" id="YW2-VN-7ct"/>
+                                    <constraint firstItem="RS7-0t-B6C" firstAttribute="leading" secondItem="yLb-4T-a4j" secondAttribute="leading" constant="16" id="a3x-BA-d3V"/>
+                                    <constraint firstItem="RS7-0t-B6C" firstAttribute="top" secondItem="Bw9-zb-4Tu" secondAttribute="bottom" constant="8" symbolic="YES" id="fCU-g4-jtL"/>
+                                    <constraint firstItem="Bw9-zb-4Tu" firstAttribute="top" secondItem="hPe-B1-yyS" secondAttribute="bottom" constant="8" symbolic="YES" id="hk1-o7-DPl"/>
+                                    <constraint firstItem="hPe-B1-yyS" firstAttribute="leading" secondItem="yLb-4T-a4j" secondAttribute="leading" constant="16" id="pND-Gg-p8F"/>
+                                    <constraint firstItem="hPe-B1-yyS" firstAttribute="top" secondItem="yLb-4T-a4j" secondAttribute="top" constant="20" id="pQG-Uy-q3b"/>
+                                    <constraint firstAttribute="trailing" secondItem="RS7-0t-B6C" secondAttribute="trailing" constant="16" id="shm-IU-OaM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RS7-0t-B6C">
-                                <rect key="frame" x="16" y="171" width="343" height="476"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bw9-zb-4Tu" firstAttribute="top" secondItem="hPe-B1-yyS" secondAttribute="bottom" constant="8" id="19h-6d-4lL"/>
-                            <constraint firstItem="hPe-B1-yyS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4G5-wL-bFi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPe-B1-yyS" secondAttribute="trailing" constant="16" id="8Sr-d4-RGW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bw9-zb-4Tu" secondAttribute="trailing" constant="108" id="F1t-LD-JTm"/>
-                            <constraint firstItem="hPe-B1-yyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="G1x-mv-2ED"/>
-                            <constraint firstItem="Bw9-zb-4Tu" firstAttribute="top" secondItem="hPe-B1-yyS" secondAttribute="bottom" constant="8" symbolic="YES" id="LHw-db-Atj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RS7-0t-B6C" secondAttribute="trailing" constant="16" id="Uwt-S9-ute"/>
-                            <constraint firstItem="RS7-0t-B6C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="h0X-zN-0QN"/>
-                            <constraint firstItem="Bw9-zb-4Tu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="jrq-xU-SoO"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="RS7-0t-B6C" secondAttribute="bottom" constant="20" id="pT7-HQ-PMY"/>
-                            <constraint firstItem="RS7-0t-B6C" firstAttribute="top" secondItem="Bw9-zb-4Tu" secondAttribute="bottom" constant="8" symbolic="YES" id="qe9-hF-IWL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yLb-4T-a4j" secondAttribute="trailing" id="H5r-e0-IbO"/>
+                            <constraint firstItem="yLb-4T-a4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YbR-Ee-zXu"/>
+                            <constraint firstItem="yLb-4T-a4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aaE-pH-ij5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yLb-4T-a4j" secondAttribute="bottom" id="l6O-82-PzL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -60,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="-29.23538230884558"/>
+            <point key="canvasLocation" x="28.125" y="-29.577464788732396"/>
         </scene>
     </scenes>
     <resources>

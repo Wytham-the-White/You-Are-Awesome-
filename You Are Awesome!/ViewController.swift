@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        messageLabel.text = "Hey, are you smart?"
+        messageLabel.text = ""
     }
 
 
